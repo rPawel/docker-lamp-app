@@ -1,7 +1,10 @@
-# Sample PHP application container:
-- docker-compose
-- Apache
-- FastCGI
-- PHP-FPM
-- Exim4
+# 3 Container PHP application with docker-compose:
+- WWW
+ - Apache
+ - FastCGI
+ - PHP-FPM
+ - Exim4
 - SSH
+ - openssh server
+- Memcache
+ - memcache server
