@@ -1,5 +1,5 @@
 www:
-  build: ./www
+  image: rpawel/lamp:trusty
   ports:
     - "49152:80"
   volumes:
@@ -19,7 +19,7 @@ www:
   mem_limit: 4096m
   memswap_limit: 1024m
 ssh:
-  build: ./ssh
+  image: rpawel/php-ssh:trusty
   ports:
     - "49153:22"
   volumes:
@@ -37,7 +37,7 @@ ssh:
   mem_limit: 512m
   memswap_limit: 256m
 memcache:
-  build: ./memcache
+  image: rpawel/memcache:trusty
   restart: on-failure
   environment:
     CTNR_LOCALE: "en_GB.UTF-8"
